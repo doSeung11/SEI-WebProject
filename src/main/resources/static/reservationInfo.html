@@ -14,25 +14,13 @@
     <link rel="stylesheet" href="assets/css/reset19.css">
     <link rel="stylesheet" href="assets/css/style19.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
-
-    <!-- 파비콘 -->
     <link rel="shortcut icon" href="assets/icons/logo2.ico">
-    <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
-
-    <!-- 페이스북 메타 태그 -->
-    <meta property="og:title" content="CODEBOX" />
-    <meta property="og:url" content="https://github.com/webstoryboy/megabox2019" />
-    <meta property="og:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg" />
-    <meta property="og:description" content="코드박스 영화 예매 사이트" />
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean"
         rel="stylesheet">
 
-    <!-- HTLM5shiv ie6~8 -->
+    <!-- HTML5shiv ie6~8 -->
     <!--[if lt IE 9]> 
       <script src="assets/js/html5shiv.min.js"></script>
       <script type="text/javascript">
@@ -48,40 +36,71 @@
             <div class="row">
                 <div class="header clearfix">
                     <h1>
-                        <a href="#">
-                            <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
-                            <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
+                        <a href="main.html">
+                            <em><img src="assets/img/Logo1.png" alt="CODEBOX"></em>
+                            <strong><img src="assets/img/subLogo1.png" alt="MOVIE THEATER"></strong>
                         </a>
                     </h1>
-                    <nav id="mNav">
-                        <h2 class="ir_so">메가박스 전체메뉴</h2>
-                        <a href="#" class="ham"><span></span></a>
-                    </nav>
-                    <nav class="nav">
-                        <ul class="clearfix">
-                            <li><a href="#movie">영화</a></li>
-                            <li><a href="#help">예약확인</a></li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>
     </header>
     <!-- //header -->
 
-    <section id="new">
+    <section id="info">
         <div class="container">
             <div class="row">
-                <div class="new">
+                <div class="info">
                     <h2><em>영화 예약 정보</em></h2>
-                    
-                    <h3>영화 : </h3>
-                    <h3>예약 일자 : </h3>
-                    <h3>예약자명 : 홍길동</h3>
-                    <h3>예약번호 : </h3>
+                    <div class="info_reservation">
+                        <ul>
+                            <li>
+                                <div class="round">
+                                    <a href="detailMovie.html#movie" class="img" title="침묵">
+                                        <img src="assets/img/poster01.jpg" srcset="assets/img/poster01@2.jpg 2x" alt="침묵">
+                                    </a>
+                                    <table class="table">
+                                        <colgroup>
+                                            <col style="width:75px;">
+                                            <col style="width:230px;">
+                                            <col style="width:80px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row" class="a-r">예매번호</th>
+                                            <td colspan="3">
+                                                <em class="num">9612-071-49727</em>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="a-r">영화명</th>
+                                            <td colspan="3">
+                                                <p class="tit-movie">
+                                                    <span>침묵</span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="a-r">극장/상영관</th>
+                                            <td>화곡/3관</td>
+                                            <th scope="row">관람인원</th>
+                                            <td>성인 2명</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="a-r">관람일시</th>
+                                            <td>2021.09.11 (토) 14:00 (3회차)</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class = "bg-round">
+                                        <a href="main.html" class="yellow">예매취소</a>
+                                        <a href="main.html" class="yellow">돌아가기</a>
+                                    </div>
+                                </div>
 
-                    
-                        
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
