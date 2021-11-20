@@ -14,19 +14,7 @@
     <link rel="stylesheet" href="assets/css/reset19.css">
     <link rel="stylesheet" href="assets/css/style19.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
-
-    <!-- 파비콘 -->
     <link rel="shortcut icon" href="assets/icons/logo2.ico">
-    <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
-
-    <!-- 페이스북 메타 태그 -->
-    <meta property="og:title" content="CODEBOX" />
-    <meta property="og:url" content="https://github.com/webstoryboy/megabox2019" />
-    <meta property="og:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg" />
-    <meta property="og:description" content="코드박스 영화 예매 사이트" />
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean"
@@ -48,7 +36,7 @@
             <div class="row">
                 <div class="header clearfix">
                     <h1>
-                        <a href="#">
+                        <a href="main.html">
                             <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
                             <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
                         </a>
@@ -341,6 +329,20 @@
             autoplay: {
                 delay: 5000,
             },
+            breakpoints: {
+                600: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 24
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                960: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
         });
 
 
