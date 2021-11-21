@@ -1,0 +1,367 @@
+
+/* content */
+
+.blank{
+  height: 50px;
+}
+
+.reserve-wrap{
+  width:950px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin: 0px auto;
+}
+
+.reservetitle{
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.reserve-date{
+  padding-bottom: 10px;
+}
+
+.reserve-container {
+    display: flex;
+    padding-bottom: 10px;
+    /* border: 1px solid #dddddd; */
+}
+
+.reserve-container>div {
+    border: 1px solid #E0E0E0;
+}
+
+.reserve-title {
+    border-bottom: 1px solid #dddddd;
+    margin: 15px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.reserve-additionalOption{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.reserve-additionalOption>div{
+  border: 1px solid #E0E0E0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 30px;
+}
+
+.reserve-selectPeoplePart{
+  font-size:18px;
+}
+
+.selectPeopelButton{
+  width:20px;
+  margin: 0px 5px;
+}
+
+.adult-part{
+  display:flex;
+  align-items: center;
+  margin:15px;
+}
+
+.youth-part{
+  display:flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.preferential-part{
+  display:flex;
+  align-items: center;
+  margin:15px;
+}
+
+.printCost{
+  width: 300px;
+}
+
+.totalCost{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.movie-part {
+  margin-right: 10px;
+  position: relative;
+  float:left;
+  width: 250px;
+}
+
+.movie-button{
+  border: 0px;
+  background-color:white;
+  display:flex;
+  align-items: center;
+  width:100%;
+}
+
+
+
+.theater-part {
+  position: relative;
+  float:left;
+  width: 400px;
+  margin-right: 10px;
+}
+
+
+.time-part {
+    width: 250px;
+    position: relative;
+    float:left;
+}
+
+.sort-wrapper {
+    margin: 10px 6px 6px 10px;
+    /* padding: 3px; */
+    display: flex;
+    border-bottom: 1px solid #dddddd;
+    font-size: 12px;
+}
+
+.sort-wrapper>div {
+    padding: 3px;
+}
+
+.sort-wrapper>div:hover {
+    border-bottom: 1px solid #111111;
+}
+
+.sort-selected {
+    font-weight: bold;
+    border-bottom: 1px solid #111111;
+}
+
+.sort-korean {
+    margin-left: 6px;
+}
+
+
+.movie-date-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 2px;
+}
+
+.movie-week-of-day {
+    margin-left: 5px;
+    font-size: 10px;
+    width: 12px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.movie-day {
+    text-align: center;
+    width: 34px;
+    height: 22px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.saturday {
+    color: #31597E;
+    font-weight: bold;
+}
+
+.sunday {
+    color: #AF2D2D;
+    font-weight: bold;
+}
+
+.movie-date-wrapper-active {
+    background-color: #333333;
+}
+
+.movie-date-wrapper-active>* {
+    color: white;
+}
+
+.theater-wrapper {
+    padding-left: 12px;
+    padding-top: 2px;
+    display: flex;
+    height:335px;
+}
+
+.theater-location-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e5e5e5
+}
+
+.theater-place-wrapper {
+    padding-right: 2px;
+    margin-top: 2px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.theater-location {
+    height: 30px;
+    font-size: 13px;
+    text-align: left;
+    background-color: #ffffff;
+    padding: 6px 6px 6px 0;
+    margin-top: 1px;
+    width:100%;
+}
+
+.theater-place {
+    padding: 6px 6px;
+    height: 30px;
+    font-size: 13px;
+    text-align: left;
+    background-color:#ffffff;
+    width:100%;
+}
+
+.reserve-time {
+    margin: 0 auto;
+}
+
+.reserve-where {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.reserve-time-wrapper {
+    padding: 0px 10px;
+}
+
+.reserve-time-button {
+    height: 40px;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.reserve-time-want {
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.reserve-time-remain {
+    color: #75966b;
+}
+
+.reserve-time-active {
+    background-color: #333333;
+    color: white;
+}
+
+.theater-location-active {
+    background-color: #333333;
+    color: white;
+}
+
+.theater-place-active {
+    background-color: #333333;
+    color: white;
+}
+
+.movie-list-wrapper {
+    padding: 4px 15px;
+    height: 335px;
+}
+
+.movie-list {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.movie-list-age {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 100%;
+    background-color: #2980B9;
+}
+.movePayButton{
+	font-size: 15px;
+	padding: 5px;
+	margin-top: 20px;
+	margin-right: 30px;
+  background-color: #333333;
+  color: white;
+  justify-content: flex-end;
+  float: right;
+  width: 80px;
+}
+.moveSeatButton:hover{
+	 background-color: #333333;
+	 color: white;
+}
+.fifteen {
+    color: white;
+    background-color: #AF2D2D;
+
+}
+
+.eighteen {
+    color: white;
+    background-color: red;
+    font-size: 11px;
+}
+
+.all {
+    color: white;
+    background-color: #52AE35;
+    font-size: 11px;
+}
+
+.movie-list-title {
+    padding: 6px 4px;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.movie-list-title-active {
+    background-color: #333333;
+}
+
+.movie-list-title-active>* {
+    font-weight: bold;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* height: 8px; */
+    border: 3px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    background: #efefef;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 50px;
+    height: 50px;
+    background: #c9c9c9;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}

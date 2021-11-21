@@ -1,0 +1,117 @@
+/* content */
+
+.blank{
+  height: 50px;
+}
+
+.reservePay-wrap{
+  width:900px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin: 0px auto;
+}
+
+.reservetitle{
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.reservePay-container{
+    display: flex;
+    padding-bottom: 10px;
+    /* border: 1px solid #dddddd; */
+}
+
+.reservePay-container>form>div{
+    border: 1px solid #E0E0E0;
+}
+
+.reservePay-title {
+    border-bottom: 1px solid #dddddd;
+    margin: 15px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.userInfo-part {
+  margin-right: 10px;
+  position: relative;
+  float:left;
+  width: 400px;
+}
+
+.userInfo-list-wrapper {
+    padding: 0px 15px;
+    height: 335px;
+}
+
+.userInfo-list>ul>li{
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo-list>ul>li>label{
+  padding: 3px 0px;
+  font-size: 15px;
+}
+
+.userInfo-list>ul>li>input{
+  background-color: #333333;
+  border: 0px;
+  height: 30px;
+}
+
+.treatmentPolicy{
+  padding: 10px 10px;
+  font-size: 14px;
+  border: 1px solid #E5E5E5;
+}
+
+.policy-title{
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.payment-part {
+  margin-right: 10px;
+  position: relative;
+  float:left;
+  width: 400px;
+}
+
+.payment-container{
+  height: 303px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-wrapper {
+    padding: 4px 15px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.payment-wrapper>ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.moveCompleteButton{
+	font-size: 15px;
+	padding: 5px;
+	margin-top: 20px;
+	margin-right: 60px;
+  background-color: #333333;
+  color: white;
+  justify-content: flex-end;
+  float: right;
+  width: 80px;
+}
+
+
+.userInfo_input{
+
+}
