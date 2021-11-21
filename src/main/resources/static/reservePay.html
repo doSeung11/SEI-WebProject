@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="codebox">
+    <title>CODEBOX 영화 예매</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset19.css">
+    <link rel="stylesheet" href="assets/css/style19.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="shortcut icon" href="assets/icons/logo2.ico">
+    <link rel="stylesheet" href="assets/css/reservePay.css">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="main.html">
+                            <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
+                            <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
+                        </a>
+                    </h1>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li><a href="#movie">영화</a></li>
+                            <li><a href="#">영화 예매</a></li>
+                            <li><a href="#help">예약확인</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div class="blank"></div>
+
+    <div class="reservePay-wrap">
+    <h1 class="reservetitle">비회원 예매</h1>
+
+    <div class="reservePay-container">
+      <form class="reservePayForm" action="#" method="post">
+        <div class="userInfo-part">
+            <div class="reservePay-title">예매자 정보 입력</div>
+             <div class="userInfo-list-wrapper">
+                <div class="userInfo-list">
+                  <ul>
+                    <li>
+                      <label for="userInfo_name">이름</label>
+                      <input type="text" style = "margin-bottom: 2%" id="userInfo_name" name="userInfo" class="userInfo_input" placeholder="이름 ex) 홍길동"/>
+                    </li>
+                    <li>
+                      <label for="userInfo_birth">생년월일</label>
+                      <input type="text" style = "margin-bottom: 2%" id="userInfo_birth" name="userInfo" class="userInfo_input" placeholder="생년월일 앞 6자리 ex) 010203"/>
+                    </li>
+                    <li>
+                      <label for="userInfo_phone">전화번호</label>
+                      <input type="text" style = "margin-bottom: 2%" id="userInfo_phone" name="userInfo" class="userInfo_input" placeholder="전화 번호 ex) 010-1234-5678"/>
+                    </li>
+                  </ul>
+                </div>
+                <div class="treatmentPolicy">
+                  <h4 class="policy-title">비회원예매 개인정보 처리방침</h4>
+                  <span class="collectPurpose">
+                      <b style="padding:3px;">수집목적</b>비회원예매 서비스 제공/이용자식별/구매 및 결제<br>
+                  </span>
+                  <span class="collectItems">
+                      <b style="padding:3px;">수집항목</b>이름, 생년월일, 전화번호<br>
+                  </span>
+                  <span class="period">
+                      <b style="padding:3px;"> 보유기간</b>관람 또는 취소 후 7일 이내<br>
+                  </span>
+                  <div class="policy-accept-select">
+                    <input type="radio" name="check_policyaccept" value="yes"/>동의
+                    <input type="radio" name="check_policyaccept" value="no"/>비동의
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="payment-part">
+            <div class="reservePay-title">
+                결제 수단 선택
+            </div>
+            <div class="payment-container">
+                <div class="payment-wrapper">
+                      <ul>
+                        <li>
+                          <input type="radio" name="check_payment" value="naverpay"/>네이버페이
+                        </li>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="kakopay"/>카카오페이
+                        </li>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="samsungpay"/>삼성페이
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="creditcard"/>신용카드
+                        </li>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="mobilephone"/>휴대폰
+                        </li>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="accounttransfer"/>계좌이체
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="curtureland"/>컬쳐랜드문화상품권
+                        </li>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="bookcurture"/>도서문화상품권
+                        </li>
+                        <li>
+                          <input type="radio" name="check_policyaccept" value="happymoney"/>해피머니(모바일팝)
+                        </li>
+                      </ul>
+
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div>
+    <button class="moveCompleteButton" type="button"><a href="reservationInfo.html" style="color:white;">예매 완료</a></button>
+    </div>
+    </div>
+
+
+    <!--footer-->
+    <footer id="footer">
+        <div id="footer_infor">
+            <div class="container">
+                <div class="row">
+                    <div class="footer_infor">
+                        <h2><img src="assets/img/logo_footer1.png" alt="megabox"></h2>
+                        <address>
+                            <p>서울특별시 중구 필동로 1길 30<br><span class="bar2">소프트웨어 공학개론</span> Team 코드박스<br><span class="bar2">도승희 박지은 안도영 이진오 조영욱</span> </p>
+                            <p>Copyright 2021 by CodeBox. All right reserved</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--'reserve.js파일 연동'-->
+    <script src="assets/js/reserve.js"></script>
+
+</body>
+</html>
