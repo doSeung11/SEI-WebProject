@@ -1,4 +1,4 @@
-package com.example.SE.domain
+package com.example.se.domain
 
 import java.time.LocalDate
 import javax.persistence.*
@@ -20,4 +20,5 @@ data class Movie(
         @Column(nullable = true)
         var Poster: String? = null,
         var Video: String
+
 )

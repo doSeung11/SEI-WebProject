@@ -1,4 +1,4 @@
-package com.example.SE.domain
+package com.example.se.domain
 
 import javax.persistence.*
 
