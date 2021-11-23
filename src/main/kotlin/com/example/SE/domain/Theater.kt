@@ -2,6 +2,7 @@ package com.example.SE.domain
 
 import javax.persistence.*
 
+
 @Entity
 @Table(name="Theater")
 data class Theater(

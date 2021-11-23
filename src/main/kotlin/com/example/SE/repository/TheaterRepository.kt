@@ -1,8 +1,10 @@
 package com.example.SE.repository
 
 import com.example.SE.domain.Theater
-import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface TheaterRepository : JpaRepository<Theater, Long>
+interface TheaterRepository : CrudRepository<Theater, Long>{
+    fun findAllBy(): List<Theater>?
+}
