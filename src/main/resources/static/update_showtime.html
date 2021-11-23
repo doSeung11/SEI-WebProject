@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset19.css">
+    <link rel="stylesheet" href="assets/css/style19.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="shortcut icon" href="assets/icons/logo2.ico">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="manager_main.html">
+                            <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
+                            <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
+                        </a>    
+                    </h1>
+                      
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <h3></h3>
+    <div class="container_2">
+        <table id="main" border="0">
+            <tr>
+                <td><div class="title" id="title1"><p>영화 이름</p></div><td>
+                <td><textarea id="input_showtime" class="input">이터널스</textarea></td>
+            </tr>
+            <tr>
+                <td><div class="title"><p>상영 극장</p></div><td></td>
+                <td>
+                <select id="theater_name_select" name="theater_name">
+                    <option value="red">강남</option>                    
+                    <option value="black">강남대로</option>                    
+                    <option value="blue">강동</option> 
+                    <option value="blue">군자</option> 
+                    <option value="blue">건대입구</option>                   
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div class="showtime">
+            <table id="showtime_table" border="0">
+                <tr>
+                    <th>상영 날짜</th>
+                    <th>시작 시간</th>
+                    <th>종료 시간</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2021/11/05</td>
+                    <td>14:30</td>
+                    <td>14:30</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>2021/11/05</td>
+                    <td>14:30</td>
+                    <td>14:30</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>2021/11/05</td>
+                    <td>14:30</td>
+                    <td>14:30</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr class="new_input">
+                    <td>상영 날짜 입력</td>
+                    <td>시작 시간 입력</td>
+                    <td>종료 시간 입력</td>
+                    <td></td>
+                </tr>
+                
+            </table>  
+            <button id="add_showtime_btn">상영 시간 추가</button>
+        </div>
+
+
+        
+        <div class="check"><button class="check_btn" onclick="location.href='update_movie.html' ">확인</button></div>
+
+
+    </div>
+</body>
