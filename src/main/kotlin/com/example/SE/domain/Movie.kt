@@ -3,6 +3,7 @@ package com.example.SE.domain
 import java.time.LocalDate
 import javax.persistence.*
 
+
 @Entity
 @Table(name="Movie")
 data class Movie(
@@ -13,7 +14,7 @@ data class Movie(
         var MovieName:String,
         var ReleaseDate: LocalDate,
         @Column(length = 500)
-        var Description: String,
+        var Mdescription: String,
         var Genre: String,
         var Age: Int,
         var RunningTime: Int,
