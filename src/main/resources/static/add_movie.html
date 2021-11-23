@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset19.css">
+    <link rel="stylesheet" href="assets/css/style19.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="shortcut icon" href="assets/icons/logo2.ico">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="manager_main.html">
+                            <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
+                            <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
+                        </a>    
+                    </h1>
+                      
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <h3>영화 추가</h3>
+    <div class="container_2">
+        <table id="main" border="0">
+            <tr>
+                <td><div class="title" id="title1"><p>영화 이름</p></div><td>
+                <td><textarea class="input" placeholder="영화 이름 입력"></textarea></td>
+                <td class="right_td"><div class="title" id="title2"><p>상영관</p></div></td>
+            </tr>
+            <tr>
+                <td><div class="title"><p>영화 소개</p></div><td></td>
+                <td><textarea id="introduction" class="input" placeholder="영화 소개 입력"></textarea></td>
+                <td class="right_td"><button class="showtime_btn" onclick="location.href='update_showtime.html'">상영 시간 설정</button></td>
+            </tr>
+            <tr>
+                <td><div class="title"><p>포스터</p></div><label class="add_file" for="file">파일 추가</label><input type="file" id="file"><td></td>
+                <td><textarea id="select_img" readonly placeholder="이미지 파일을 선택해주세요"></textarea></td>
+            </tr>    
+        </table>
+
+        <table id="add_theater_table" class="input" border="0">
+            <tr><td class="theaters" style="color: grey;">상영관 입력</td></tr>
+            <tr><td><button id="add_theater_btn">상영관 추가</button></td></tr>
+        </table>
+
+        
+        <div class="check"><button class="check_btn" onclick="location.href='manager_main.html'">확인</button></div>
+
+
+    </div>
+</body>
