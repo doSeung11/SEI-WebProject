@@ -1,5 +1,6 @@
 package com.example.SE.controller
 
+import com.example.SE.domain.Movie
 import com.example.SE.service.MovieService
 import com.example.SE.service.TheaterService
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,16 +17,47 @@ class ReservatorController {
     private lateinit var theaterService: TheaterService;
 
     @GetMapping("/")
-    private fun getMovies(): String {
-//        ResponseEntity
-//                .ok()
-//                .body(movieService.getAllMovie())
-        return "hello"
+    private fun getMovies(model:Model): String {
+        var movies = movieService.getAllMovie();
+
+        var movieList = ArrayList<Movie>()
+        if (movies != null) {
+            for(element in movies) {
+                var temp: Movie = element;
+                movieList.add(temp)
+            }
+        }
+        model.addAttribute("Movies", movieList.subList(0,4));
+        return "main"
+    }
+
+    @GetMapping("/all")
+    private fun getAllMovies(model:Model): String {
+        var movies = movieService.getAllMovie();
+        var allMovie = ArrayList<ArrayList<Movie>>();
+        var movieList = ArrayList<Movie>();
+        var i = 0
+        if (movies != null) {
+            for(element in movies) {
+                var temp: Movie = element;
+                movieList.add(temp);
+                i++;
+                if(i%4 == 0) {
+                    allMovie.add(movieList.clone() as ArrayList<Movie>);
+                    movieList.clear();
+                }
+            }
+        }
+        if(movieList.isNotEmpty())
+            allMovie.addAll(listOf(movieList));
+
+        model.addAttribute("Movies", allMovie);
+        return "detailMovie"
     }
 
     @GetMapping("/movieInfo/{id}")
     private fun getMovieInfo(@PathVariable id:String, model:Model): String{
-        var information = movieService.getMovie(id.toLong())
+        var information = movieService.getMovie(id.toLong());
         model.addAttribute("Mno", information?.Mno);
         model.addAttribute("MovieName", information?.MovieName);
         model.addAttribute("ReleaseDate", information?.ReleaseDate);

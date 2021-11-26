@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="header clearfix">
                     <h1>
-                        <a href="main.html">
+                        <a href="/">
                             <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
                             <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
                         </a>    
@@ -49,32 +49,32 @@
         </div>
     </header>
     <!-- //header -->
-    
+
     <section>
         <div class="slider">
-           <div class="swiper-container">
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide ss1">
                         <div class="container">
                             <div class="row">
-                                <h3>어벤져스 : 앤드게임</h3>
-                                <p>역대 최단 기간 1000만 관객 돌파 기록 </p>
+                                <h3>장르만 로맨스</h3>
+                                <p>매일매일 버라이어티한 그 작가의 사생활 개봉박두!</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide ss2">
                         <div class="container">
                             <div class="row">
-                                <h3>어벤져스 : 앤드게임</h3>
-                                <p>역대 최단 기간 1000만 관객 돌파 기록 </p>
+                                <h3>듄</h3>
+                                <p>듄을 지배하는 자가 우주를 지배한다!</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide ss3">
                         <div class="container">
                             <div class="row">
-                                <h3>어벤져스 : 앤드게임</h3>
-                                <p>역대 최단 기간 1000만 관객 돌파 기록 </p>
+                                <h3>아담스 패밀리 2</h3>
+                                <p>호러블리 사춘기 아이들과 떠나는 위험천진난만 패밀리 어드벤처!</p>
                             </div>
                         </div>
                     </div>
@@ -91,76 +91,32 @@
     <section id="movie">
         <div class="container">
             <div class="row">
-                <h2 class="ir_so">영화 예매</h2>
                 <div class="movie">
                     <div class="movie_chart">
                         <div class="swiper-container2">
                             <div class="chart_cont1 swiper-wrapper">
+                                {{#Movies}}
                                 <div>
                                     <div class="poster">
                                         <figure>
-                                            <img src="assets/img/poster01.jpg" srcset="assets/img/poster01@2.jpg 2x" alt="침묵">
+                                            <img src="{{Poster}}" srcset="{{Poster}} 2x">
                                         </figure>
-                                        <div class="rank"><strong>1</strong></div>
+                                        <div class="rank"><strong>{{Mno}}</strong></div>
                                     </div>
                                     <div class="infor">
-                                        <h3><span class="icon all ir_pm">전체관람가</span> <strong>침묵</strong></h3>
+                                        <h3><span class="icon a{{Age}} ir_pm"></span> <strong>{{MovieName}}</strong></h3>
                                         <div class="infor_btn">
-                                            <a href="#new">상세보기</a>
-                                            <a href="#">예매하기</a>
+                                            <a href="/movieInfo/{{Mno}}">상세보기</a>
+                                            <a href="/">예매하기</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster02.jpg" srcset="assets/img/poster02@2.jpg 2x" alt="침묵">
-                                        </figure>
-                                        <div class="rank"><strong>2</strong></div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">12세</span> <strong>침묵</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#new">상세보기</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster03.jpg" srcset="assets/img/poster03@2.jpg 2x" alt="침묵">
-                                        </figure>
-                                        <div class="rank"><strong>3</strong></div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a15 ir_pm">15세</span> <strong>침묵</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#new">상세보기</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster04.jpg" srcset="assets/img/poster04@2.jpg 2x" alt="침묵">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">19세</span> <strong>침묵</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#new">상세보기</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                {{/Movies}}
                                 
                             </div>
                         </div>
                         <div class="btn">
-                            <a href="detailMovie.html#movie" class="purple">더보기</a>
+                            <a href="/all#movie" class="purple">더보기</a>
                         </div>
                         <!-- //chart_cont1-->
                     </div>
