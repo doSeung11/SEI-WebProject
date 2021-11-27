@@ -12,5 +12,4 @@ class TheaterServiceImpl constructor(@Autowired private val theaterRepository: T
 
     override fun getTheater(id: Long): Theater? =
             theaterRepository.findById(id).orElse(null)
-
 }
