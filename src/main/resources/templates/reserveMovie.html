@@ -68,7 +68,8 @@
                     <li>
                       <button class="movie-button">
                         <span class="movie-list-age">{{Age}}</span>
-                        <span class="movie-list-title">{{MovieName}}</span><br>
+                        <span class="movie-list-title">{{MovieName}}</span>
+                        <span class="movie-list-num" style="color:white; opacity:0.01;">*{{Mno}}</span><br>
                       </button>
                     </li>
                       {{/movieList}}
@@ -116,7 +117,10 @@
                       <ul>
                           {{#theaterList}}
                         <li>
-                          <button class="theater-place">{{TheaterName}}</button>
+                          <button class="theater-place">
+                              <span class="theater-list-name">{{TheaterName}}</span>
+                              <span class="theater-list-num" style="color:white; opacity:0.01;">*{{Tno}}</span>
+                          </button>
                         </li>
                           {{/theaterList}}
                       </ul>
@@ -175,21 +179,21 @@
       <div class="reserve-selectPeoplePart">
            <div class="adult-part">
              <b>성인</b>
-             <input type="button" class="selectPeopelButton" onclick='count("plusAdult")' value="+"/>
+             <input type="button" class="selectPeopleButton" onclick='count("plusAdult")' value="+"/>
              <div id='result-adult'>0</div>
-             <input type="button" class="selectPeopelButton" onclick='count("minusAdult")' value="-"/>
+             <input type="button" class="selectPeopleButton" onclick='count("minusAdult")' value="-"/>
            </div>
            <div class="youth-part">
              <b>청소년</b>
-             <input type="button" class="selectPeopelButton" onclick='count("plusChild")' value="+"/>
+             <input type="button" class="selectPeopleButton" onclick='count("plusChild")' value="+"/>
              <div id='result-child'>0</div>
-             <input type="button" class="selectPeopelButton" onclick='count("minusChild")' value="-"/>
+             <input type="button" class="selectPeopleButton" onclick='count("minusChild")' value="-"/>
            </div>
            <div class="preferential-part">
              <b>우대</b>
-             <input type="button" class="selectPeopelButton" onclick='count("plusPrefer")' value="+"/>
+             <input type="button" class="selectPeopleButton" onclick='count("plusPrefer")' value="+"/>
              <div id='result-prefer'>0</div>
-             <input type="button" class="selectPeopelButton" onclick='count("minusPrefer")' value="-"/>
+             <input type="button" class="selectPeopleButton" onclick='count("minusPrefer")' value="-"/>
            </div>
            </div>
            <div class="printCost">
