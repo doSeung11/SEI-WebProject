@@ -9,7 +9,7 @@ import com.example.SE.service.TimetableService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Controller
-import org.springframework.ui.Model;
+import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 
 
@@ -29,9 +29,11 @@ class ReserveController {
             var movieList: List<Movie>? = movieService.getAllMovie();
             var theaterList: List<Theater>? = theaterService.getAllTheaters();
             //var timeList: List<Timetable>? = tableService.getAllTable();
+            var theaterNum = theaterList?.size
 
             model.addAttribute("movieList", movieList);
             model.addAttribute("theaterList", theaterList);
+            model.addAttribute("theaterNum", theaterNum);
             //model.addAttribute("timeList", timeList);
 
             return "reserveMovie"
