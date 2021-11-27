@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="codebox">
+    <title>CODEBOX 영화 예매</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset19.css">
+    <link rel="stylesheet" href="assets/css/style19.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="shortcut icon" href="assets/icons/logo2.ico">
+    <link rel="stylesheet" href="assets/css/reserve.css">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="main.html">
+                            <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
+                            <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
+                        </a>
+                    </h1>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li><a href="main.html">영화</a></li>
+                            <li><a href="#">영화 예매</a></li>
+                            <li><a href="main.html#help">예약확인</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div class="blank"></div>
+
+    <div class="reserve-wrap">
+    <h1 class="reservetitle">영화 예매</h1>
+    <div class="reserve-date">
+      <label for="utime" class="ir_so">시간</label>
+      <select id="utime" name="utime" class="ui_select2">
+        <option value="2021/11/11(목)">2021/11/11(목)</option>
+        <option value="2021/11/12(금)">2021/11/12(금)</option>
+        <option value="2021/11/13(토)">2021/11/13(토)</option>
+        <option value="2021/11/14(일)">2021/11/14(일)</option>
+      </select>
+    </div>
+
+    <div class="reserve-container">
+
+        <div class="movie-part">
+            <div class="reserve-title">영화</div>
+             <div class="movie-list-wrapper">
+                <div class="movie-list">
+                  <ul>
+                      {{#movieList}}
+                    <li>
+                      <button class="movie-button">
+                        <span class="movie-list-age">{{Age}}</span>
+                        <span class="movie-list-title">{{MovieName}}</span><br>
+                      </button>
+                    </li>
+                      {{/movieList}}
+                      <!--
+                    <li>
+                      <button class="movie-button">
+                        <span class="movie-list-age" style="background-color:#F29706;">15</span>
+                        <span class="movie-list-title">베놈2</span>
+                      </button>
+                    </li>
+                    -->
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="theater-part">
+            <div class="reserve-title">
+                극장
+            </div>
+            <div class="theater-container">
+                <div class="theater-wrapper">
+                    <div class="theater-location-wrapper">
+                      <ul>
+                        <li>
+                          <button class="theater-location">서울(18)</button>
+                        </li>
+                        <li>
+                          <button class="theater-location">경기(27)</button>
+                        </li>
+                        <li>
+                          <button class="theater-location">대전/충청/세종(16)</button>
+                        </li>
+                        <li>
+                          <button class="theater-location">부산/대구/경상(22)</button>
+                        </li>
+                        <li>
+                          <button class="theater-location">광주/전라(9)</button>
+                        </li>
+                        <li>
+                          <button class="theater-location">강원(4)</button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="theater-place-wrapper">
+                      <ul>
+                          {{#theaterList}}
+                        <li>
+                          <button class="theater-place">{{TheaterName}}</button>
+                        </li>
+                          {{/theaterList}}
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="time-part">
+            <div class="reserve-title">시간</div>
+            <div class="reserve-time">
+                <div class="reserve-time-wrapper">
+                  <ul>
+                      <!--
+                      {{#timeList}}
+                    <li>
+                      <button class="reserve-time-button">
+                        <span class="reserve-time-want">{{Tdate}}</span>
+                        <span class="reserve-time-where">{{Ttime}}</span>
+                        <span class="reserve-time-remain">{{reSeat}}/200석</span>
+                      </button>
+                    </li>
+                      {{/timeList}}
+                      -->
+                    <li>
+                      <button class="reserve-time-button">
+                        <span class="reserve-time-want">11:20~13:35</span>
+                        <span class="reserve-time-where">1관</span>
+                        <span class="reserve-time-remain">110/250석</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="reserve-time-button">
+                        <span class="reserve-time-want">14:00~16:15</span>
+                        <span class="reserve-time-where">7관</span>
+                        <span class="reserve-time-remain">198/340석</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="reserve-time-button">
+                        <span class="reserve-time-want">18:00~20:15</span>
+                        <span class="reserve-time-where">8관</span>
+                        <span class="reserve-time-remain">50/200석</span>
+                      </button>
+                    </li>
+                  </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="reserve-additionalOption">
+      <div class="reserve-selectPeoplePart">
+           <div class="adult-part">
+             <b>성인</b>
+             <input type="button" class="selectPeopelButton" onclick='count("plusAdult")' value="+"/>
+             <div id='result-adult'>0</div>
+             <input type="button" class="selectPeopelButton" onclick='count("minusAdult")' value="-"/>
+           </div>
+           <div class="youth-part">
+             <b>청소년</b>
+             <input type="button" class="selectPeopelButton" onclick='count("plusChild")' value="+"/>
+             <div id='result-child'>0</div>
+             <input type="button" class="selectPeopelButton" onclick='count("minusChild")' value="-"/>
+           </div>
+           <div class="preferential-part">
+             <b>우대</b>
+             <input type="button" class="selectPeopelButton" onclick='count("plusPrefer")' value="+"/>
+             <div id='result-prefer'>0</div>
+             <input type="button" class="selectPeopelButton" onclick='count("minusPrefer")' value="-"/>
+           </div>
+           </div>
+           <div class="printCost">
+             <div class="totalCost">
+               <b>최종 결제 금액:</b>
+               <div id='costResult'>0</div>
+               <b>원</b>
+             </div>
+           </div>
+      </div>
+
+    <div>
+    <form class="moveSeatForm" action="moveSeat.do" method="post">
+    <input type="hidden" class="title" name="title">
+    <input type="hidden" class="movieAge" name="movieAge">
+    <input type="hidden" class="selectedTheater" name="selectedTheater">
+    <input type="hidden" class="reserveDate" name="movieDate">
+    <input type="hidden" class="runningTime" name="runningTime">
+    <button class="movePayButton" type="button"><a href="reservePay.html" style="color:white;">다음</a></button>
+    </form>
+    </div>
+    </div>
+
+
+    <!--footer-->
+    <footer id="footer">
+        <div id="footer_infor">
+            <div class="container">
+                <div class="row">
+                    <div class="footer_infor">
+                        <h2><img src="assets/img/logo_footer1.png" alt="megabox"></h2>
+                        <address>
+                            <p>서울특별시 중구 필동로 1길 30<br><span class="bar2">소프트웨어 공학개론</span> Team 코드박스<br><span class="bar2">도승희 박지은 안도영 이진오 조영욱</span> </p>
+                            <p>Copyright 2021 by CodeBox. All right reserved</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--'reserve.js파일 연동'-->
+    <script src="assets/js/reserve.js"></script>
+
+</body>
+</html>
