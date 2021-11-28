@@ -5,12 +5,17 @@ import com.example.SE.repository.MovieRepository
 import com.example.SE.repository.ReservationRepository
 import com.example.SE.repository.TheaterRepository
 import com.example.SE.repository.TimetableRepository
-import org.springframework.stereotype.Service
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
 @Service
+class ResorvatorServiceImpl constructor(@Autowired private val movieRepository: MovieRepository, private val reservationRepository: ReservationRepository, private val theaterRepository: TheaterRepository, private val timetableRepository: TimetableRepository): ResorvatorService{
+    override fun getAllMovie(): List<Movie>? =
+        movieRepository.findAllBy()
 
-class ReservationServiceImpl constructor(@Autowired private val reservationRepository: ReservationRepository, private val movieRepository: MovieRepository, private val theaterRepository: TheaterRepository, private val timetableRepository: TimetableRepository): ReservationService{
+
+    override fun getMovie(id: Long): Movie? =
+            movieRepository.findById(id).orElse(null)
 
     override fun getAllReservations(): List<Reservation>?  =
             reservationRepository.findAllBy()
@@ -27,4 +32,5 @@ class ReservationServiceImpl constructor(@Autowired private val reservationRepos
     override fun deleteReservation(id: Long) {
         reservationRepository.deleteById(id)
     }
+
 }
