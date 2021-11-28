@@ -17,9 +17,9 @@
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
-    
+
     <!-- HTLM5shiv ie6~8 -->
-    <!--[if lt IE 9]> 
+    <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.min.js"></script>
       <script type="text/javascript">
          alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
@@ -27,118 +27,79 @@
    <![endif]-->
 </head>
 <body>
-    
+
     <header id="header">
         <div class="containerr">
             <div class="row">
                 <div class="header clearfix">
                     <h1>
-                        <a href="manager_main.html">
+                        <a href="/admin">
                             <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
                             <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
-                        </a>    
+                        </a>
                     </h1>
                     <nav class="nav">
                         <ul class="clearfix">
                             <!--<li><a href="update_showtime.html">상영 시간표 수정</a></li>-->
                         </ul>
-                    </nav>    
+                    </nav>
                 </div>
             </div>
         </div>
     </header>
     <!-- //header -->
-    
-    
-    
-    
+
+
+
+
     <section id="movie">
         <div class="container">
             <div class="row">
                 <h2 class="ir_so">관리자 페이지</h2>
                 <div class="movie">
                     <div class="movie_chart">
-                        <div class="swiper-container2">
-                            <div class="chart_cont1 swiper-wrapper">
+                        <div>
+                            {{#Movies}}
+                            <div>
+                                {{#.}}
                                 <div>
                                     <div class="poster">
                                         <figure>
-                                            <img src="https://seimoviebucket.s3.ap-northeast-2.amazonaws.com/1.jpg" srcset="assets/img/poster01@2.jpg 2x" alt="이터널스">
+                                            <img src="{{Poster}}" srcset="{{Poster}} 2x">
                                         </figure>
-                                        <div class="rank"><strong>1</strong></div>
+                                        <div class="rank"><strong>{{Mno}}</strong></div>
                                     </div>
                                     <div class="infor">
-                                        <h3><span class="icon all ir_pm">전체관람가</span> <strong>이터널스</strong></h3>
+                                        <h3><span class="icon a{{Age}} ir_pm"></span> <strong>{{MovieName}}</strong></h3>
                                         <div class="infor_btn">
-                                            <a href="update_movie.html">수정</a>
-                                            <a href="#">삭제</a>
+                                            <a href="/update_movie/{{Mno}}">수정</a>
+                                            <a href="/admin">삭제</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="https://seimoviebucket.s3.ap-northeast-2.amazonaws.com/2.jpg" srcset="assets/img/poster02@2.jpg 2x" alt="장르만 로맨스">
-                                        </figure>
-                                        <div class="rank"><strong>2</strong></div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a15 ir_pm">12세</span> <strong>장르만로맨스</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="update_movie.html">수정</a>
-                                            <a href="#">삭제</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="https://seimoviebucket.s3.ap-northeast-2.amazonaws.com/3.jpg" srcset="assets/img/poster03@2.jpg 2x" alt="강릉">
-                                        </figure>
-                                        <div class="rank"><strong>3</strong></div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">15세</span> <strong>강릉</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="update_movie.html">수정</a>
-                                            <a href="#">삭제</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="https://seimoviebucket.s3.ap-northeast-2.amazonaws.com/4.jpg" srcset="assets/img/poster04@2.jpg 2x" alt="디어 에반 핸슨">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">19세</span> <strong>디어에반핸슨</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="update_movie.html">수정</a>
-                                            <a href="#">삭제</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                                {{/.}}
+                            </div>
+                            {{/Movies}}
+                            <div class="btn">
+                                <a href="/add_movie" class="purple">영화 추가</a>
                             </div>
                         </div>
-                        <div class="btn">
-                            <a href="add_movie.html" class="purple">영화 추가</a>
-                        </div>
-                        <!-- //chart_cont1-->
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
-    </section>  
+    </section>
     <!-- //movie -->
-    
-    
 
-    
-    
-    
+
+
+
+
+
     <footer id="footer">
         <div id="footer_infor">
             <div class="container">
@@ -164,11 +125,11 @@
 
     <!-- 자바스크립트 라이브러리 -->
     <script src="assets/js/jquery.min_1.12.4.js"></script>
-    
-    
+
+
     <script src="assets/js/swiper.min.js"></script>
-    
-    
+
+
     <script>
         //배너 이미지 슬라이드
         var swiper = new Swiper('.swiper-container',{

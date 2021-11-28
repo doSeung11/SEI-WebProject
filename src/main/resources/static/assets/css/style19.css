@@ -13,7 +13,25 @@
 
 /* 가운데 영역 */
 .container {position: relative; width: 1280px; margin: 0 auto; /* background:rgba(0,0,0,0.1); */ }
+var movies = movieService.getAllMovie();
+        var allMovie = ArrayList<ArrayList<Movie>>();
+        var movieList = ArrayList<Movie>();
+        var i = 0
+        if (movies != null) {
+            for(element in movies) {
+                var temp: Movie = element;
+                movieList.add(temp);
+                i++;
+                if(i%4 == 0) {
+                    allMovie.add(movieList.clone() as ArrayList<Movie>);
+                    movieList.clear();
+                }
+            }
+        }
+        if(movieList.isNotEmpty())
+            allMovie.addAll(listOf(movieList));
 
+        model.addAttribute("Movies", allMovie);
 /* 로우 영역 */
 .row {padding: 0 16px;}
 

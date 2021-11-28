@@ -28,7 +28,66 @@ class MovieController {
             }
         }
         model.addAttribute("Movies", movieList.subList(0,4));
+        print(movieList);
         return "main"
+    }
+
+    @GetMapping("/admin")
+    private fun admin(model:Model): String {
+        var movies = movieService.getAllMovie();
+        var allMovie = ArrayList<ArrayList<Movie>>();
+        var movieList = ArrayList<Movie>();
+        var i = 0
+        if (movies != null) {
+            for(element in movies) {
+                var temp: Movie = element;
+                movieList.add(temp);
+                i++;
+                if(i%4 == 0) {
+                    allMovie.add(movieList.clone() as ArrayList<Movie>);
+                    movieList.clear();
+                }
+            }
+        }
+        if(movieList.isNotEmpty())
+            allMovie.addAll(listOf(movieList));
+
+        model.addAttribute("Movies", allMovie);
+        return "admin_main"
+    }
+
+    @GetMapping("/update_movie/{id}")
+    private fun update_movie(@PathVariable id:String, model:Model): String{
+        var information = movieService.getMovie(id.toLong());
+        model.addAttribute("Mno", information?.Mno);
+        model.addAttribute("MovieName", information?.MovieName);
+        model.addAttribute("ReleaseDate", information?.ReleaseDate);
+        var year = information?.ReleaseDate?.year;
+        var month = information?.ReleaseDate?.monthValue;
+        var day = information?.ReleaseDate?.dayOfMonth;
+        model.addAttribute("year",year);
+        model.addAttribute("month",month);
+        model.addAttribute("day",day);
+
+        model.addAttribute("Mdescription", information?.Mdescription);
+        model.addAttribute("Genre", information?.Genre);
+        model.addAttribute("Age", information?.Age);
+        model.addAttribute("RunningTime", information?.RunningTime);
+        model.addAttribute("Poster", information?.Poster);
+        model.addAttribute("Video", information?.Video);
+        return "update_movie"
+    }
+
+    @GetMapping("/add_movie")
+    private fun add_movie(model:Model): String {
+
+        return "add_movie"
+    }
+
+    @GetMapping("/update_showtime")
+    private fun update_showtime(model:Model): String {
+
+        return "update_showtime"
     }
 
     @GetMapping("/all")
