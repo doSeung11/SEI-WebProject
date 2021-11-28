@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="assets/css/style19.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="shortcut icon" href="assets/icons/logo2.ico">
+    <script type="text/javascript" src="assets/js/app.js"></script>
 </head>
 
 <body>
@@ -44,12 +45,14 @@
         </table>
 
         <table id="add_theater_table" class="input" border="0">
+            <tbody id="tbody">
             <tr><td class="theaters">강남</td><td><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td></tr>
             <tr><td class="theaters">강남대로</td><td><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td></tr>
             <tr><td class="theaters">강동</td><td><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td></tr>
             <tr><td class="theaters">군자</td><td><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td></tr>
-            <tr><td class="theaters" style="color: grey;">상영관 입력</td></tr>
-            <tr><td colspan="2"><button id="add_theater_btn">상영관 추가</button></td></tr>
+            <tr><td class="theaters"><textarea class="input_theater" placeholder="상영관 입력"></textarea></td></tr>
+            <tr id="last_tr"><td colspan="2"><button id="add_theater_btn" onclick="add_theater()">상영관 추가</button></td></tr>
+            </tbody>
         </table>
 
         
