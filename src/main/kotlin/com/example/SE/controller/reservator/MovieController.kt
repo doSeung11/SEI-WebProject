@@ -1,4 +1,4 @@
-package com.example.SE.controller
+package com.example.SE.controller.reservator
 
 import com.example.SE.domain.Movie
 import com.example.SE.service.MovieService
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 
 @Controller
-class ReservatorController {
+class MovieController {
     @Autowired
     private lateinit var movieService: MovieService;
     private lateinit var theaterService: TheaterService;

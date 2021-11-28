@@ -132,13 +132,13 @@
                 <div class="help clearfix">
                     <article class="help_box1">
                         <div class="notice">
-                            <h3><em>예약 확인</em></h3>
-                            <input type="text" style = "margin-bottom: 2%" id="reservationNum1" name="reservationNum" value="" class="ui_input3" placeholder="예약 번호를 입력해 주세요. ex) 12345678">
-                            <input type="text" style = "margin-bottom: 2%" id="reservationNum2" name="reservationNum" value="" class="ui_input3" placeholder="이름을 입력해 주세요. ex) 홍길동">
-                            <input type="text" style = "margin-bottom: 2%" id="reservationNum3" name="reservationNum" value="" class="ui_input3" placeholder="전화 번호를 입력해 주세요. ex) 010-1234-5678">
-                            <div class="btn">
-                                <a href="reservationInfo.html" class="purple">확인</a>
-                            </div>
+                            <form action ="/reservation" method = "get">
+                                <h3><em>예약 확인</em></h3>
+                                <input type="text" style = "margin-bottom: 2%" id="Num1" name="Num1" value="" class="ui_input3" placeholder="예약 번호를 입력해 주세요. ex) 12345678">
+                                <div class="btn">
+                                    <input type = "submit" class="purple" value ="확인"/>
+                                </div>
+                            </form>
                         </div>
                     </article>
                 </div>
