@@ -32,16 +32,16 @@
         <div class="row">
             <div class="header clearfix">
                 <h1>
-                    <a href="main.html">
+                    <a href="/">
                         <em><img src="../assets/img/Logo1.png" alt="MEGABOX"></em>
                         <strong><img src="../assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
                     </a>
                 </h1>
                 <nav class="nav">
                     <ul class="clearfix">
-                        <li><a href="#movie">영화</a></li>
+                        <li><a href="/#movie">영화</a></li>
                         <li><a href="reserve.html">영화 예매</a></li>
-                        <li><a href="#help">예약확인</a></li>
+                        <li><a href="/#help">예약확인</a></li>
                     </ul>
                 </nav>
             </div>
@@ -57,7 +57,7 @@
         <div class="row">
             <div class="new">
                 <h2><em>영화 상세 정보</em></h2>
-                <div class="new_left" style="'background-image: url({{Poster}});'">
+                <div class="new_left">
                     <div class="play" id="showTrailer" data-youtube={{Video}}>
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
@@ -77,8 +77,8 @@
                     </ul>
 
                     <div class="btn">
-                        <a href="#" class="white">예매하기</a>
-                        <a href="#" class="purple">돌아가기</a>
+                        <a href="/" class="white">예매하기</a>
+                        <a href="/#movie" class="purple">돌아가기</a>
                     </div>
                 </div>
             </div>
@@ -118,19 +118,5 @@
 <script src="../assets/js/swiper.min.js"></script>
 <script src="../assets/js/iframe_api.js"></script>
 <script src="../assets/js/movie.js"></script>
-<script>
-    function chek_mark(){
-        var el= document.getElementById("a").style.background-image;
-        if (el.url("Black-Wallpaper.jpg"))
-        {
-            el.url = "cross1.png";
-        }
-        else if(el.url("cross1.png"))
-        {
-            alert("<h1>This is working too.</h1>");
-        }
-    }
-</script>
-
 </body>
 </html>

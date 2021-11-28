@@ -98,7 +98,7 @@
 .movie_chart > div > div > div .infor h3 {color: #333; font-size: 30px; font-weight: 700; margin-bottom: 20px;}
 .movie_chart > div > div > div .infor h3 strong {padding-left: 0px;}
 .movie_chart > div > div > div .infor h3 span {width: 29px; height: 29px; display: inline-block; margin-top: 9px; vertical-align: -2px;}
-.movie_chart > div > div > div .infor h3 span.all {background-position: -87px -125px;}
+.movie_chart > div > div > div .infor h3 span.a0 {background-position: -87px -125px;}
 .movie_chart > div > div > div .infor h3 span.a12 {background-position: -58px -125px;}
 .movie_chart > div > div > div .infor h3 span.a15 {background-position: 0 -125px;}
 .movie_chart > div > div > div .infor h3 span.a19 {background-position: -29px -125px;}
@@ -133,7 +133,7 @@
 /* 새로운 영화 */
 .new {padding: 100px 0; overflow: hidden; position: relative; }
 .new h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
-.new .new_left {position: relative; margin-right: 423px ; height: 500px; overflow: hidden; background-size: cover; background: #ccc center center;}
+.new .new_left {position: relative; margin-right: 423px ; height: 500px; overflow: hidden; background-size: cover;background: #ccc center center;}
 .new .new_left .play {position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; transform: translate(-50%,-50%); cursor: pointer;}
 .new .new_left .play .st0 {fill: #fff; opacity: 0.3;}
 .new .new_left .play .st1 {fill: #fff;}

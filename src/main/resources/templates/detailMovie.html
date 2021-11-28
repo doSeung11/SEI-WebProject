@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="codebox">
+    <title>CODEBOX</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset19.css">
+    <link rel="stylesheet" href="assets/css/style19.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="shortcut icon" href="assets/icons/logo2.ico">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean"
+        rel="stylesheet">
+
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]> 
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script type="text/javascript">
+         alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
+      </script>
+   <![endif]-->
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="/">
+                            <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
+                            <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
+                        </a>
+                    </h1>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li><a href="/all#movie">영화</a></li>
+                            <li><a href="/reservation#movie">예약</a></li>
+                            <li><a href="/#help">예약확인</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <section>
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ss1">
+                        <div class="container">
+                            <div class="row">
+                                <h3>장르만 로맨스</h3>
+                                <p>매일매일 버라이어티한 그 작가의 사생활 개봉박두!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ss2">
+                        <div class="container">
+                            <div class="row">
+                                <h3>듄</h3>
+                                <p>듄을 지배하는 자가 우주를 지배한다!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ss3">
+                        <div class="container">
+                            <div class="row">
+                                <h3>아담스 패밀리 2</h3>
+                                <p>호러블리 사춘기 아이들과 떠나는 위험천진난만 패밀리 어드벤처!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner -->
+
+
+    <section id="movie">
+        <div class="container">
+            <div class="row">
+                <h2 class="ir_so">영화 예매</h2>
+                <div class="movie">
+                    <div class="movie_chart">
+
+                            <div>
+                                {{#Movies}}
+                                <div>
+                                    {{#.}}
+                                    <div>
+                                        <div class="poster">
+                                            <figure>
+                                                <img src="{{Poster}}" srcset="{{Poster}} 2x">
+                                            </figure>
+                                            <div class="rank"><strong>{{Mno}}</strong></div>
+                                        </div>
+                                        <div class="infor">
+                                            <h3><span class="icon a{{Age}} ir_pm"></span> <strong>{{MovieName}}</strong></h3>
+                                            <div class="infor_btn">
+                                                <a href="/movieInfo/{{Mno}}">상세보기</a>
+                                                <a href="#">예매하기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/.}}
+                                </div>
+                                {{/Movies}}
+                            <div class="btn">
+                                <a href="/" class="purple">돌아가기</a>
+                            </div>
+                        </div>
+                        <!-- //chart_cont1-->
+                    </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- //movie -->
+
+    <footer id="footer">
+        <div id="footer_infor">
+            <div class="container">
+                <div class="row">
+                    <div class="footer_infor">
+                        <h2><img src="assets/img/logo_footer1.png" alt="megabox"></h2>
+                        <address>
+                            <p>서울특별시 중구 필동로 1길 30<br><span class="bar2">소프트웨어 공학개론</span> Team 코드박스<br><span
+                                    class="bar2">도승희 박지은 안도영 이진오 조영욱</span> </p>
+                            <p>Copyright 2021 by CodeBox. All right reserved</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <aside role="complementary" id="blackout" class="overlay">
+        <div id="trailerModal" class="modal">
+            <div id="trailer"></div><!-- YouTube 플레이어로 대체되는 부분 -->
+        </div>
+        <button id="hideTrailer" class="modal_close">닫기</button>
+    </aside>
+
+
+    <!-- 자바스크립트 라이브러리 -->
+    <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script src="assets/js/modernizr-custom.js"></script>
+    <script src="assets/js/ie-checker.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/iframe_api.js"></script>
+    <script src="assets/js/movie.js"></script>
+    <script>
+        //배너 이미지 슬라이드
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 24
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                960: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
+        });
+
+
+        //영화차트 이미지 슬라이드
+        var swiper = new Swiper('.swiper-container2', {
+            slidesPerView: 4,
+            spaceBetween: 24,
+            preventClicks: false,
+            preventClicksPropagation: false,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 24
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                960: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
