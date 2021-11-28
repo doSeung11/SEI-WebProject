@@ -78,25 +78,6 @@ class ReservatorController {
 
         return "movieInfo"
     }
-//    @GetMapping("/reservation/{id}")
-//    private fun getReservationInfo(@PathVariable id:Long, model:Model): String {
-//        var information = reservationService.getReservation(id);
-//        var movieService: MovieService? = null
-//        //var theaterService: TheaterService? = null
-//        //var timetableService: TimetableService? = null
-//        //var movie = movieService?.getMovie(information?.Mno);
-//        //var theater = theaterService?.getTheater(information.Tno);
-//        //var timetable = timetableService?.getTimetable(information.TimeNo);
-//        model.addAttribute("Rno", information?.Rno);
-//        //model.addAttribute("Mname",movie?.MovieName);
-//        //model.addAttribute("Mposter",movie?.Poster);
-//        //model.addAttribute("Tname",theater?.TheaterName);
-//        //model.addAttribute("Sno",timetable?.Sno);
-//        //model.addAttribute("Tdate",timetable?.Tdate)
-//        //model.addAttribute("Ttime",timetable?.Ttime);
-//        model.addAttribute("Headcount",information?.Headcount);
-//        return "reservationInfo";
-//    }
 
     @GetMapping("/theaters")
     private fun getTheaters(): ResponseEntity<Any> {
