@@ -1,4 +1,4 @@
-//package com.example.SE.controller
+//package com.example.SE.controller.reservator
 //
 //import com.example.SE.service.TheaterService
 //import org.springframework.beans.factory.annotation.Autowired
@@ -23,6 +23,4 @@
 //                .ok()
 //                .body(theaterService.getTheater(id))
 //    }
-//
-//
 //}
