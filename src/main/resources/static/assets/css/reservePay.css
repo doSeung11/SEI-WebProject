@@ -60,12 +60,15 @@
   background-color: #333333;
   border: 0px;
   height: 30px;
+  color: white;
+  padding-left: 5px;
 }
 
 .treatmentPolicy{
   padding: 10px 10px;
   font-size: 14px;
   border: 1px solid #E5E5E5;
+  height: 105px;
 }
 
 .policy-title{

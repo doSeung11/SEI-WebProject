@@ -6,8 +6,7 @@ import javax.persistence.*
 @Entity
 @Table(name="Reservation")
 data class Reservation(
-        @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-        var Rno: Long? = null,
+        @Id var Rno: Long = 0,
         var MemberName:String,
         var MemberPnum:String,
         var MemberBdate: LocalDate,

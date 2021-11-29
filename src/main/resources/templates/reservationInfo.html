@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="codebox">
+    <title>CODEBOX</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset19.css">
+    <link rel="stylesheet" href="assets/css/style19.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="shortcut icon" href="assets/icons/logo2.ico">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean"
+          rel="stylesheet">
+
+    <!-- HTML5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script type="text/javascript">
+         alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
+      </script>
+    <![endif]-->
+</head>
+
+<body>
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="header clearfix">
+                <h1>
+                    <a href="/">
+                        <em><img src="assets/img/Logo1.png" alt="CODEBOX"></em>
+                        <strong><img src="assets/img/subLogo1.png" alt="MOVIE THEATER"></strong>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- //header -->
+
+<section id="info">
+    <div class="container">
+        <div class="row">
+            <div class="info">
+                <h2><em>영화 예약 정보</em></h2>
+                <div class="info_reservation">
+                    <ul>
+                        <li>
+                            <div class="round">
+                                <a href="detailMovie.html#movie" class="img" title="영화">
+                                    <img src="{{Poster}}" srcset="{{Poster}} 128x" alt="영화">
+                                </a>
+                                <table class="table">
+                                    <colgroup>
+                                        <col style="width:75px;">
+                                        <col style="width:230px;">
+                                        <col style="width:80px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row" class="a-r">예매번호</th>
+                                        <td colspan="3">
+                                            <em class="num">{{Rno}}</em>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="a-r">영화명</th>
+                                        <td colspan="3">
+                                            <p class="tit-movie">
+                                                <span>{{Mname}}</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="a-r">극장/상영관</th>
+                                        <td>{{Tname}}/{{Sno}}관</td>
+                                        <th scope="row">관람인원</th>
+                                        <td>{{Headcount}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="a-r">관람일시</th>
+                                        <td>{{Tdate}}/{{Ttime}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class = "bg-round">
+                                    <a href="/deleteRe" class="yellow"> <p onclick="alert('예매가 취소되었습니다.')">예매취소</p></a>
+                                    <a href="/" class="yellow">돌아가기</a>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //new -->
+
+
+
+<footer id="footer">
+    <div id="footer_infor">
+        <div class="container">
+            <div class="row">
+                <div class="footer_infor">
+                    <h2><img src="assets/img/logo_footer1.png" alt="megabox"></h2>
+                    <address>
+                        <p>서울특별시 중구 필동로 1길 30<br><span class="bar2">소프트웨어 공학개론</span> Team 코드박스<br><span
+                                class="bar2">도승희 박지은 안도영 이진오 조영욱</span> </p>
+                        <p>Copyright 2021 by CodeBox. All right reserved</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+
+
+<!-- 자바스크립트 라이브러리 -->
+<script src="assets/js/jquery.min_1.12.4.js"></script>
+<script src="assets/js/modernizr-custom.js"></script>
+<script src="assets/js/ie-checker.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/iframe_api.js"></script>
+<script src="assets/js/movie.js"></script>
+
+
+</script>
+</body>
+
+</html>

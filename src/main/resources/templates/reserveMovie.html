@@ -17,6 +17,7 @@
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
+
 </head>
 <body>
 
@@ -25,16 +26,16 @@
             <div class="row">
                 <div class="header clearfix">
                     <h1>
-                        <a href="main.html">
+                        <a href="/">
                             <em><img src="assets/img/Logo1.png" alt="MEGABOX"></em>
                             <strong><img src="assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
                         </a>
                     </h1>
                     <nav class="nav">
                         <ul class="clearfix">
-                            <li><a href="main.html">영화</a></li>
+                            <li><a href="/#movie">영화</a></li>
                             <li><a href="#">영화 예매</a></li>
-                            <li><a href="main.html#help">예약확인</a></li>
+                            <li><a href="/#help">예약확인</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -45,15 +46,15 @@
 
     <div class="blank"></div>
 
+    <form class="movieSelect" action="/reserveUser" method="get">
     <div class="reserve-wrap">
     <h1 class="reservetitle">영화 예매</h1>
     <div class="reserve-date">
       <label for="utime" class="ir_so">시간</label>
       <select id="utime" name="utime" class="ui_select2">
-        <option value="2021/11/11(목)">2021/11/11(목)</option>
-        <option value="2021/11/12(금)">2021/11/12(금)</option>
-        <option value="2021/11/13(토)">2021/11/13(토)</option>
-        <option value="2021/11/14(일)">2021/11/14(일)</option>
+        {{#dateList}}
+        <option value="{{.}}">{{.}}</option>
+        {{/dateList}}
       </select>
     </div>
 
@@ -66,21 +67,13 @@
                   <ul>
                       {{#movieList}}
                     <li>
-                      <button class="movie-button">
+                      <button class="movie-button" type="button">
                         <span class="movie-list-age">{{Age}}</span>
                         <span class="movie-list-title">{{MovieName}}</span>
                         <span class="movie-list-num" style="color:white; opacity:0.01;">*{{Mno}}</span><br>
                       </button>
                     </li>
                       {{/movieList}}
-                      <!--
-                    <li>
-                      <button class="movie-button">
-                        <span class="movie-list-age" style="background-color:#F29706;">15</span>
-                        <span class="movie-list-title">베놈2</span>
-                      </button>
-                    </li>
-                    -->
                   </ul>
                 </div>
             </div>
@@ -94,8 +87,9 @@
                     <div class="theater-location-wrapper">
                       <ul>
                         <li>
-                          <button class="theater-location">서울({{theaterNum}})</button>
+                          <button class="theater-location" type="button">서울({{theaterNum}})</button>
                         </li>
+                         <!--
                         <li>
                           <button class="theater-location">경기(27)</button>
                         </li>
@@ -111,13 +105,14 @@
                         <li>
                           <button class="theater-location">강원(4)</button>
                         </li>
+                        -->
                       </ul>
                     </div>
                     <div class="theater-place-wrapper">
                       <ul>
                           {{#theaterList}}
                         <li>
-                          <button class="theater-place">
+                          <button class="theater-place" type="button">
                               <span class="theater-list-name">{{TheaterName}}</span>
                               <span class="theater-list-num" style="color:white; opacity:0.01;">*{{Tno}}</span>
                           </button>
@@ -134,38 +129,39 @@
             <div class="reserve-time">
                 <div class="reserve-time-wrapper">
                   <ul>
-                      <!--
+
                       {{#timeList}}
                     <li>
-                      <button class="reserve-time-button">
-                        <span class="reserve-time-want">{{Tdate}}</span>
-                        <span class="reserve-time-where">{{Ttime}}</span>
+                      <button class="reserve-time-button" type="button">
+                        <span class="reserve-time-want">{{Ttime}}</span>
+                        <span class="reserve-time-where">{{Sno}}관</span>
                         <span class="reserve-time-remain">{{reSeat}}/200석</span>
                       </button>
                     </li>
                       {{/timeList}}
-                      -->
+                      <!--
                     <li>
-                      <button class="reserve-time-button">
+                      <button class="reserve-time-button" type="button">
                         <span class="reserve-time-want">11:20~13:35</span>
                         <span class="reserve-time-where">1관</span>
                         <span class="reserve-time-remain">110/250석</span>
                       </button>
                     </li>
                     <li>
-                      <button class="reserve-time-button">
+                      <button class="reserve-time-button" type="button">
                         <span class="reserve-time-want">14:00~16:15</span>
                         <span class="reserve-time-where">7관</span>
                         <span class="reserve-time-remain">198/340석</span>
                       </button>
                     </li>
                     <li>
-                      <button class="reserve-time-button">
+                      <button class="reserve-time-button" type="button">
                         <span class="reserve-time-want">18:00~20:15</span>
                         <span class="reserve-time-where">8관</span>
                         <span class="reserve-time-remain">50/200석</span>
                       </button>
                     </li>
+                    -->
                   </ul>
 
                 </div>
@@ -206,17 +202,19 @@
       </div>
 
     <div>
-    <form class="moveSeatForm" action="moveSeat.do" method="post">
-    <input type="hidden" class="title" name="title">
-    <input type="hidden" class="movieAge" name="movieAge">
-    <input type="hidden" class="selectedTheater" name="selectedTheater">
-    <input type="hidden" class="reserveDate" name="movieDate">
-    <input type="hidden" class="runningTime" name="runningTime">
-    <button class="movePayButton" type="button"><a href="reservePay.html" style="color:white;">다음</a></button>
-    </form>
-    </div>
-    </div>
 
+    <input type="hidden" class="movieNo" name="movieNo" id="Mno">
+    <input type="hidden" class="selectedTheater" name="selectedTheater" id="Tno">
+    <input type="hidden" class="selectedTime" name="selectedTime" id="time">
+    <input type="hidden" class="selectedScreen" name="selectedScreen" id="Sno">
+    <input type="hidden" class="headCount" name="headCount" id="Headcount">
+    <input type="hidden" class="totalCost" name="totalCost" id="totalCost">
+    <input type="submit" value="다음" class="movePayButton" style="color:white;">
+
+    </div>
+    </div><!--reserve-wrap-->
+
+    </form><!--movieSelect-->
 
     <!--footer-->
     <footer id="footer">
