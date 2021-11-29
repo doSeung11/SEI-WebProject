@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/reset19.css">
+    <link rel="stylesheet" href="/assets/css/style19.css">
+    <link rel="stylesheet" href="/assets/css/swiper.css">
+    <link rel="shortcut icon" href="/assets/icons/logo2.ico">
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+</head>
+
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="/admin">
+                            <em><img src="/assets/img/Logo1.png" alt="MEGABOX"></em>
+                            <strong><img src="/assets/img/subLogo1.png" alt="LIFE THEATER"></strong>
+                        </a>    
+                    </h1>
+                      
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <h3></h3>
+    <div class="container_2">
+        <table id="main" border="0">
+            <tr>
+                <td><div class="title" id="title1"><p>영화 이름</p></div><td>
+                <td><textarea id="input_showtime" class="input">{{MovieName}}</textarea></td>
+            </tr>
+            <tr>
+                <td><div class="title"><p>상영 극장</p></div><td></td>
+                <td>
+                <select id="theater_name_select" name="theater_name">
+                    {{#Theaters}}
+                        <option value="red">{{TheaterName}}</option>
+                    {{/Theaters}}
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div class="showtime">
+            <table id="showtime_table" border="0">
+                <tbody id="tbody">
+                <tr>
+                    <th>상영 날짜</th>
+                    <th>시작 시간</th>
+                    <th>남은 좌석</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2021-11-30</td>
+                    <td>09:00:00</td>
+                    <td>120</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>2021-11-30</td>
+                    <td>10:50:00</td>
+                    <td>120</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>2021-11-30</td>
+                    <td>13:00:00</td>
+                    <td>120</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>2021-11-30</td>
+                    <td>16:00:00</td>
+                    <td>120</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>2021-11-30</td>
+                    <td>20:00:00</td>
+                    <td>120</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>2021-11-30</td>
+                    <td>22:00:00</td>
+                    <td>120</td>
+                    <td class="delete_showtime"><img class="delete" src="https://artfeel.co.kr/web/product/big/o_Icon_010.jpg"/></td>
+                </tr>
+                <tr class="new_input">
+                    <td><textarea class="input_time" placeholder="상영 날짜 입력"></textarea></td>
+                    <td><textarea class="input_time" placeholder="시작 시간 입력"></textarea></td>
+                    <td><textarea class="input_time" placeholder="남은 좌석 입력"></textarea></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>  
+            <button id="add_showtime_btn" onclick="add_time()">상영 시간 추가</button>
+        </div>
+
+
+        
+        <div class="check"><button class="check_btn" onclick="location.href='/update_movie/{{Mno}}' ">확인</button></div>
+
+
+    </div>
+</body>
+</html>
