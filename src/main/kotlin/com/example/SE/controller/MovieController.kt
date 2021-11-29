@@ -1,4 +1,4 @@
-package com.example.SE.controller.reservator
+package com.example.SE.controller
 
 import com.example.SE.domain.Movie
 import com.example.SE.service.ResorvatorService
