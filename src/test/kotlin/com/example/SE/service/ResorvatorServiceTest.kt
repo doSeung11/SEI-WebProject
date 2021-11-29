@@ -19,9 +19,6 @@ import javax.transaction.Transactional
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class ResorvatorServiceTests {
 
-//    @Autowired
-//    private lateinit var mockMvc: MockMvc
-
     @Autowired
     private lateinit var movieRepository: MovieRepository
     @Autowired
@@ -51,11 +48,6 @@ class ResorvatorServiceTests {
         if (information != null) {
             assertEquals("이터널스",information.MovieName)
         }
-    }
-
-    @Test
-    fun getAllReservations() {
-        var information = reservationRepository.findAllBy()
     }
 
     @Test
@@ -99,26 +91,25 @@ class ResorvatorServiceTests {
 
     @Test
     fun getAllScreenrooms() {
-    }
+        var room = screenroomRepository.findAllBy()
 
-    @Test
-    fun getScreenroom() {
+        room?.get(0)?.let { assertEquals(it.Tno, 1) }
+        room?.get(0)?.let { assertEquals(it.Sno, 1) }
     }
 
     @Test
     fun getAllTheaters() {
-    }
+        var theater = theaterRepository.findAllBy()
 
-    @Test
-    fun getTheater() {
+        theater?.get(0)?.let { assertEquals(it.Tno, 1) }
+        theater?.get(0)?.let { assertEquals(it.TheaterName, "강동") }
     }
 
     @Test
     fun getAllTimetables() {
-    }
-
-    @Test
-    fun getTimetable() {
+        var timetable = timetableRepository.findAllBy()
+        timetable?.get(0)?.let { assertEquals(it.tno, 1) }
+        timetable?.get(0)?.let { assertEquals(it.mno, 1) }
     }
 
     @Test

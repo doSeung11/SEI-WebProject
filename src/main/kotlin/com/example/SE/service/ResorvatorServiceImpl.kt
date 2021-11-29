@@ -38,23 +38,14 @@ class ResorvatorServiceImpl constructor(@Autowired private val movieRepository: 
         reservationRepository.save(reservation)
 
     override fun getAllScreenrooms(): List<Screenroom>? =
-        screenroomRepository.findAllBy();
-
-
-    override fun getScreenroom(id: Long): Screenroom? =
-        screenroomRepository.findById(id).orElse(null);
+        screenroomRepository.findAllBy()
 
     override fun getAllTheaters(): List<Theater>? =
-        theaterRepository.findAllBy();
-
-    override fun getTheater(id: Long): Theater? =
-        theaterRepository.findById(id).orElse(null)
+        theaterRepository.findAllBy()
 
     override fun getAllTimetables(): List<Timetable>? =
         timetableRepository.findAllBy()
 
-    override fun getTimetable(id: Long): Timetable? =
-        timetableRepository.findById(id).orElse(null)
 
     override fun getTimeNo(tno: Long, mno: Long, sno: Long, tdate: LocalDate, ttime: LocalTime): Long {
         var targetTable: Timetable? = timetableRepository.findFirstByTnoAndMnoAndSnoAndTdateAndTtime(tno, mno, sno, tdate, ttime)

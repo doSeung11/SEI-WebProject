@@ -14,10 +14,7 @@ interface ResorvatorService {
     fun deleteReservation(id: Long)
     fun saveReservation(reservation: Reservation): Reservation
     fun getAllScreenrooms(): List<Screenroom>?
-    fun getScreenroom(id: Long): Screenroom?
     fun getAllTheaters(): List<Theater>?
-    fun getTheater(id: Long): Theater?
     fun getAllTimetables(): List<Timetable>?
-    fun getTimetable(id: Long): Timetable?
     fun getTimeNo(tno: Long, mno: Long, sno: Long, tdate: LocalDate, ttime: LocalTime): Long
 }
