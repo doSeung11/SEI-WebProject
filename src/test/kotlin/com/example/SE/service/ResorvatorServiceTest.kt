@@ -114,5 +114,18 @@ class ResorvatorServiceTests {
 
     @Test
     fun getTimeNo() {
+        var time: Timetable = timetableRepository.findById(1).orElse(null)
+        var tno = time.tno
+        var mno = time.mno
+        var sno = time.sno
+        var tdate = time.tdate
+        var ttime = time.ttime
+        var targetTable: Timetable? = timetableRepository.findFirstByTnoAndMnoAndSnoAndTdateAndTtime(tno, mno, sno, tdate, ttime)
+        var testTimeNo: Long = 0
+        if (targetTable != null) {
+            testTimeNo = targetTable.timeNo
+        }
+
+        assertEquals(timetableRepository.findById(1).orElse(null).timeNo, testTimeNo)
     }
 }
