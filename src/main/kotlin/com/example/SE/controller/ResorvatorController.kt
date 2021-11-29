@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import javax.servlet.http.HttpServletRequest
 
 @Controller
-class MovieController {
+class ResorvatorController {
     @Autowired
     private lateinit var resorvatorService: ResorvatorService
     var Rnum: Long =0
