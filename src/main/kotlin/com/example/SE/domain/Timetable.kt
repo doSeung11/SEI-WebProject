@@ -7,11 +7,11 @@ import javax.persistence.*
 @Entity
 @Table(name="Timetable")
 data class Timetable(
-        @JoinColumn(name = "Tno") var Tno: Long,
-        @JoinColumn(name = "Mno") var Mno: Long,
-        @Id @Column(name = "TimeNo") var TimeNo: Long,
-        var Sno: Long,
-        var Tdate: LocalDate,
-        var Ttime: LocalTime,
+        @JoinColumn(name = "Tno") var tno: Long,
+        @JoinColumn(name = "Mno") var mno: Long,
+        @Id @Column(name = "TimeNo") var timeNo: Long,
+        var sno: Long,
+        var tdate: LocalDate,
+        var ttime: LocalTime,
         var ReSeat: Int
 )
