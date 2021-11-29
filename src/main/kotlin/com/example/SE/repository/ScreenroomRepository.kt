@@ -5,4 +5,6 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface ScreenroomRepository : CrudRepository<Screenroom, Long>
+interface ScreenroomRepository : CrudRepository<Screenroom, Long>{
+    fun findAllBy(): List<Screenroom>?
+}

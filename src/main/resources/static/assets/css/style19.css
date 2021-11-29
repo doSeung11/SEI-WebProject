@@ -208,8 +208,8 @@ var movies = movieService.getAllMovie();
 .help article > div {border: 1px solid #dbdbdb; height: 350px;}
 .help article h3 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
 .help_box1 .notice .btn {overflow: hidden; margin-top: 2%; text-align: center;}
-.help_box1 .notice .btn a {width: 30%; box-sizing: border-box; padding: 10px 30px 12px 30px; display: inline-block; }
-.help_box1 .notice .btn .purple {background-color: #FFCD4A;color: #fff;border: 1px solid #FFCD4A; font-size: 18px;}
+.help_box1 .notice .btn {width: 30%; box-sizing: border-box; padding: 10px 30px 12px 30px; display: inline-block; }
+.help_box1 .notice .btn .purple {width: 30%; border-radius: 10px 30px 12px 30px; display: inline-block; background-color: #FFCD4A;color: #fff;border: 1px solid #FFCD4A; font-size: 18px;}
 
 /* 공지사항 */
 .notice {position: relative; padding: 17px;}
