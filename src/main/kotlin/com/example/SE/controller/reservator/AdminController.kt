@@ -1,7 +1,8 @@
 package com.example.SE.controller.reservator
 
 import com.example.SE.domain.Movie
-import com.example.SE.service.MovieService
+import com.example.SE.domain.Theater
+import com.example.SE.service.AdminService
 import com.example.SE.service.TheaterService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
@@ -11,32 +12,15 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 
 @Controller
-class MovieController {
+class AdminController {
     @Autowired
-    private lateinit var movieService: MovieService;
-    private lateinit var theaterService: TheaterService;
+    private lateinit var AdminService: AdminService;
+    @Autowired
+    private lateinit var TheaterService: TheaterService;
 
-    @GetMapping("/")
-    private fun getMovies(model:Model): String {
-        var movies = movieService.getAllMovie();
-
-        var movieList = ArrayList<Movie>()
-        if (movies != null) {
-            for(element in movies) {
-                var temp: Movie = element;
-                movieList.add(temp)
-            }
-        }
-        model.addAttribute("Movies", movieList.subList(0,4));
-
-        return "main"
-    }
-
-
-
-    @GetMapping("/all")
-    private fun getAllMovies(model:Model): String {
-        var movies = movieService.getAllMovie();
+    @GetMapping("/admin")
+    private fun admin(model:Model): String {
+        var movies = AdminService.getAllMovie();
         var allMovie = ArrayList<ArrayList<Movie>>();
         var movieList = ArrayList<Movie>();
         var i = 0
@@ -55,12 +39,12 @@ class MovieController {
             allMovie.addAll(listOf(movieList));
 
         model.addAttribute("Movies", allMovie);
-        return "detailMovie"
+        return "admin_main"
     }
 
-    @GetMapping("/movieInfo/{id}")
-    private fun getMovieInfo(@PathVariable id:String, model:Model): String{
-        var information = movieService.getMovie(id.toLong());
+    @GetMapping("/update_movie/{id}")
+    private fun update_movie(@PathVariable id:String, model:Model): String{
+        var information = AdminService.getMovie(id.toLong());
         model.addAttribute("Mno", information?.Mno);
         model.addAttribute("MovieName", information?.MovieName);
         model.addAttribute("ReleaseDate", information?.ReleaseDate);
@@ -78,22 +62,44 @@ class MovieController {
         model.addAttribute("Poster", information?.Poster);
         model.addAttribute("Video", information?.Video);
 
+        var theaters = TheaterService.getAllTheaters();
+        var allTheater = ArrayList<Theater>();
+        if (theaters != null) {
+            for(element in theaters) {
+                allTheater.add(element);
+                model.addAttribute("theater"+element.Tno, element.TheaterName);
+            }
+        }
+        model.addAttribute("Theaters", allTheater);
 
-        return "movieInfo"
+        return "update_movie"
     }
 
-    @GetMapping("/theaters")
-    private fun getTheaters(): ResponseEntity<Any> {
-        return ResponseEntity
-                .ok()
-                .body(theaterService.getAllTheaters())
+    @GetMapping("/add_movie")
+    private fun add_movie(model:Model): String {
+        var movies = AdminService.getAllMovie();
+        model.addAttribute("movies_length", movies?.size?.plus(1));
+        return "add_movie"
     }
 
-    @GetMapping("/theater/{id}")
-    private fun getTheaterById(@PathVariable id:Long): ResponseEntity<Any>{
-        return ResponseEntity
-                .ok()
-                .body(theaterService.getTheater(id))
+    @GetMapping("/update_showtime/{id}")
+    private fun update_showtime(@PathVariable id:String, model:Model): String {
+
+        var information = AdminService.getMovie(id.toLong());
+        model.addAttribute("MovieName", information?.MovieName);
+        model.addAttribute("Mno", information?.Mno);
+
+        var theaters = TheaterService.getAllTheaters();
+        var allTheater = ArrayList<Theater>();
+        if (theaters != null) {
+            for(element in theaters) {
+                allTheater.add(element);
+                model.addAttribute("theater"+element.Tno, element.TheaterName);
+            }
+        }
+        model.addAttribute("Theaters", allTheater);
+
+        return "update_showtime"
     }
 
 }

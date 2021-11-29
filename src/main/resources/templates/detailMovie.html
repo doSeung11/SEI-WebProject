@@ -98,33 +98,32 @@
                 <h2 class="ir_so">영화 예매</h2>
                 <div class="movie">
                     <div class="movie_chart">
-
+                        <div>
+                            {{#Movies}}
                             <div>
-                                {{#Movies}}
+                                {{#.}}
                                 <div>
-                                    {{#.}}
-                                    <div>
-                                        <div class="poster">
-                                            <figure>
-                                                <img src="{{Poster}}" srcset="{{Poster}} 2x">
-                                            </figure>
-                                            <div class="rank"><strong>{{Mno}}</strong></div>
-                                        </div>
-                                        <div class="infor">
-                                            <h3><span class="icon a{{Age}} ir_pm"></span> <strong>{{MovieName}}</strong></h3>
-                                            <div class="infor_btn">
-                                                <a href="/movieInfo/{{Mno}}">상세보기</a>
-                                                <a href="#">예매하기</a>
-                                            </div>
+                                    <div class="poster">
+                                        <figure>
+                                            <img src="{{Poster}}" srcset="{{Poster}} 2x">
+                                        </figure>
+                                        <div class="rank"><strong>{{Mno}}</strong></div>
+                                    </div>
+                                    <div class="infor">
+                                        <h3><span class="icon a{{Age}} ir_pm"></span> <strong>{{MovieName}}</strong></h3>
+                                        <div class="infor_btn">
+                                            <a href="/movieInfo/{{Mno}}">상세보기</a>
+                                            <a href="#">예매하기</a>
                                         </div>
                                     </div>
-                                    {{/.}}
                                 </div>
-                                {{/Movies}}
-                            <div class="btn">
-                                <a href="/" class="purple">돌아가기</a>
+                                {{/.}}
                             </div>
+                            {{/Movies}}
+                        <div class="btn">
+                            <a href="/" class="purple">돌아가기</a>
                         </div>
+                    </div>
                         <!-- //chart_cont1-->
                     </div>
 
