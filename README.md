@@ -57,7 +57,7 @@ http://localhost:8080
 
 ---
 ## Reference
-https://github.com/webstoryboy/megabox2019
+https://github.com/webstoryboy/megabox2019<br>
 https://github.com/loy124/CGV_Clone
 
 ---
